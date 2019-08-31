@@ -1,0 +1,10 @@
+body {
+   font-family: 'Chilanka', cursive;
+   margin-top: 300px;
+   text-align: center;
+}
+
+#clock {
+   font-weight: 700;
+   font-size: 120px;
+}
