@@ -3,6 +3,24 @@ body {
    margin-top: 300px;
    text-align: center;
    color: #fff;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   height: 100%;
+   width: 100%;
+
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   height: 100%;
+   width: 100%;
 }
 
 #clock {

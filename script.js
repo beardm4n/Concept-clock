@@ -3,7 +3,7 @@ let clock = document.querySelector('#clock'),
 
 function getTime() {
    let time = new Date(),
-       hour = (time.getHours() % 12).toString(),
+       hour = time.getHours().toString(),
        min = time.getMinutes().toString(),
        sec = time.getSeconds().toString();
 
