@@ -1,29 +1,31 @@
-body {
-   font-family: 'Chilanka', cursive;
-   margin-top: 300px;
-   text-align: center;
-   color: #fff;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-   height: 100%;
-   width: 100%;
-
+html, body {
+    background-color: rgb(10, 114, 155);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 100%;    
 }
 
-.container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-
-   height: 100%;
-   width: 100%;
+.day {
+    color: white;
 }
 
-#clock {
-   font-weight: 700;
-   font-size: 120px;
+.progress-ring__hours {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.5s;
+}
+
+.progress-ring__minutes {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.5s;
+}
+
+.progress-ring__seconds {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 1s;
 }
