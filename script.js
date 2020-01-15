@@ -1,14 +1,14 @@
-const day = document.querySelector('.day');
-const hour = document.querySelector('.progress-ring__hours');
-const min = document.querySelector('.progress-ring__minutes');
-const sec = document.querySelector('.progress-ring__seconds');
-const radiusH = hour.r.baseVal.value;
-const radiusM = min.r.baseVal.value;
-const radiusS = sec.r.baseVal.value;
-// calculate the circumference
-const circumferenceH = 2 * Math.PI * radiusH;
-const circumferenceM = 2 * Math.PI * radiusM;
-const circumference = 2 * Math.PI * radiusS;
+let day = document.querySelector('.day'),
+    hour = document.querySelector('.progress-ring__hours'),
+    min = document.querySelector('.progress-ring__minutes'),
+    sec = document.querySelector('.progress-ring__seconds'),
+    radiusH = hour.r.baseVal.value,
+    radiusM = min.r.baseVal.value,
+    radiusS = sec.r.baseVal.value,
+    // calculate the circumference
+    circumferenceH = 2 * Math.PI * radiusH,
+    circumferenceM = 2 * Math.PI * radiusM,
+    circumference = 2 * Math.PI * radiusS;
 
 hour.style.strokeDasharray = `${circumferenceH} ${circumferenceH}`;
 hour.style.strokeDashoffset = circumferenceH;
@@ -38,29 +38,33 @@ function getHours() {
     const time = new Date(),
           h = time.getHours();
 
-    (h >= 0 && h < 12) ? day.textContent = 'AM' : day.textContent = 'PM'; 
+    (h >= 0 && h < 12) ? day.textContent = 'AM' : day.textContent = 'PM';
 
-    if (h >= 0 && h < 12) {
+    if (h === 0) {
+        setHours(0.02);
+    } else if (h > 0 && h < 12) {
         setHours(h);
     } else {
         setHours(h - 12);
     }
 }
 
-setInterval(getHours, 1000)
+setInterval(getHours, 1000);
 
 function getMinutes() {
     const time = new Date(),
           m = time.getMinutes() + 1;
-    setMinutes(m);
+    
+    (m === 0) ? setMinutes(60) : setMinutes(m);
 }
 
-setInterval(getMinutes, 1000)
+setInterval(getMinutes, 1000);
 
 function getSeconds() {
-    const time = new Date();
-    let s = time.getSeconds() + 1;
-    setSeconds(s);
+    const time = new Date(),
+          s = time.getSeconds();
+
+    (s === 0) ? setSeconds(60) : setSeconds(s);
 }
 
 setInterval(getSeconds, 500);
