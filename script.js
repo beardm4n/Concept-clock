@@ -1,4 +1,4 @@
-let day = document.querySelector('.day'),
+let text = document.querySelector('#text'),
     hour = document.querySelector('.progress-ring__hours'),
     min = document.querySelector('.progress-ring__minutes'),
     sec = document.querySelector('.progress-ring__seconds'),
@@ -38,7 +38,7 @@ function getHours() {
     const time = new Date(),
           h = time.getHours();
 
-    (h >= 0 && h < 12) ? day.textContent = 'AM' : day.textContent = 'PM';
+    (h >= 0 && h < 12) ? text.textContent = 'AM' : text.textContent = 'PM';
 
     if (h === 0) {
         setHours(0.02);

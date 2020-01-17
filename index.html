@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Circle progress bar</title>
+    <title>Concept clock</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="day"></h1>
     <svg class="progress-ring" width="540" height="540">
         <circle class="progress-ring__hours" stroke="white" stroke-width="4" cx="270" cy="270" r="240" fill="transparent"/>
         <circle class="progress-ring__minutes" stroke="white" stroke-width="4" cx="270" cy="270" r="180" fill="transparent"/>
         <circle class="progress-ring__seconds" stroke="white" stroke-width="4" cx="270" cy="270" r="120" fill="transparent"/>
-        <!-- <text class="day" x="255" y="270">asdfh</text> -->
+        <text id="text" x="220" y="290"></text>
     </svg>
     <script src="script.js"></script>
 </body>
