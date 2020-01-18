@@ -8,10 +8,6 @@ html, body {
     height: 100%;    
 }
 
-.day {
-    color: white;
-}
-
 .progress-ring__hours {
     transform-origin: center;
     transform: rotate(-90deg);
